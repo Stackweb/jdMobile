@@ -1,0 +1,48 @@
+/*
+* @Author: Administrator
+* @Date:   2017-06-09 16:58:00
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-06-12 08:58:32
+*/
+*,
+::before,
+::after{
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: transparent; /* 清除点击的默认效果 */
+	-webkit-box-sizing: border-box; /* 以border开始计算盒子的宽度 */
+}
+body {
+	font-size: 14px;
+	font-family: "Microsoft YaHei",sans-serif;
+	color: #000;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+input,
+textarea {
+	border: none;
+	outline-style: none;
+	resize: none;
+	-webkit-appearance: none;
+}
+/* 清除浮动效果 */
+.clearfix::before,
+.clearfix::after {
+	content: ".";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+[class^="icon_"]{
+	background: url('../images/sprites.png') no-repeat;
+	background-size: 200px 200px; 
+}
