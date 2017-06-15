@@ -1,0 +1,88 @@
+/*
+* @Author: Administrator
+* @Date:   2017-06-15 10:21:09
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-06-15 17:40:48
+*/
+body {
+	background-color: #f5f5f5;
+}
+.jd_topBar {
+	position: static;
+}
+
+/* 安全提示 */
+.jd_safeTip {
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 13px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+.jd_safeTip p {
+	position: relative;
+}
+.jd_safeTip p .safeIcon {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background: url(../images/safe_icon.png) no-repeat;
+	-webkit-background-size: 18px 18px;
+	background-size: 18px 18px;
+	margin-right: 4px;
+	vertical-align: middle;
+	margin-top: -4px;
+}
+
+/* 购物车商品部分 */
+.jd_shop {
+	margin-top: 10px;
+	background-color: #fff;
+	position: relative;
+}
+.jd_shop .jd_shop-check {
+	width: 20px;
+	height: 20px;
+	display: block;
+	background: url(../images/shop-icon.png) no-repeat;
+	-webkit-background-size: 50px 100px;
+	background-size: 50px 100px;
+	background-position: 0 0;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+}
+.jd_shop .jd_shop-check[checked] {
+	background-position: -25px 0;
+}
+.jd_shop .jd_shop_tit {
+	height: 36px;
+	line-height: 36px;
+	border-bottom: 1px solid #e0e0e0;
+	border-top: 1px solid #e0e0e0;
+}
+.jd_shop .title_name {
+	width: 100%;
+	float: left;
+	padding-left: 25px;
+}
+.jd_shop .title_name .imgLogo {
+	width: 15px;
+	height: 13px;
+	display: block;
+	float: left;
+	margin-top: 12px;
+	margin-left: 10px;
+}
+.jd_shop .title_name .name {
+	font-size: 13px;
+	margin-left: 4px;
+}
+.jd_shop .title_name .tip {
+	float: right;
+	color: #d8505c;
+	font-size: 13px;
+	margin-right: 10px;
+}
