@@ -2,7 +2,11 @@
 * @Author: Administrator
 * @Date:   2017-06-15 10:21:09
 * @Last Modified by:   Administrator
+<<<<<<< HEAD
 * @Last Modified time: 2017-06-15 16:45:21
+=======
+* @Last Modified time: 2017-06-19 10:30:13
+>>>>>>> e55daaed19d7f60e591f6e2df66af041c9d07b3b
 */
 body {
 	background-color: #f5f5f5;
@@ -14,7 +18,11 @@ body {
 /* 安全提示 */
 .jd_safeTip {
     width: 100%;
+<<<<<<< HEAD
     height: 34px;
+=======
+    height: 35px;
+>>>>>>> e55daaed19d7f60e591f6e2df66af041c9d07b3b
     line-height: 34px;
     text-align: center;
     font-size: 13px;
@@ -42,7 +50,11 @@ body {
 	background-color: #fff;
 	position: relative;
 }
+<<<<<<< HEAD
 .jd_shop .jd_shop-check {
+=======
+.jd_shop_check {
+>>>>>>> e55daaed19d7f60e591f6e2df66af041c9d07b3b
 	width: 20px;
 	height: 20px;
 	display: block;
@@ -54,6 +66,7 @@ body {
     top: 8px;
     left: 10px;
 }
+<<<<<<< HEAD
 .jd_shop .jd_shop-check[checked] {
 	background-position: -25px 0;
 }
@@ -67,10 +80,27 @@ body {
 	width: 100%;
 	float: left;
 	padding-left: 25px;
+=======
+.jd_shop_check[checked] {
+	background-position: -25px 0;
+}
+.jd_shop .jd_shop_tit {
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px solid #e0e0e0;
+	border-top: 1px solid #e0e0e0;
+	position: relative;
+}
+.jd_shop .title_name {
+	padding-left: 40px;
+    padding-right: 10px;
+    font-size: 13px;
+>>>>>>> e55daaed19d7f60e591f6e2df66af041c9d07b3b
 }
 .jd_shop .title_name .imgLogo {
 	width: 15px;
 	height: 13px;
+<<<<<<< HEAD
 	display: block;
 	float: left;
 	margin-top: 12px;
@@ -79,10 +109,235 @@ body {
 .jd_shop .title_name .name {
 	font-size: 13px;
 	margin-left: 4px;
+=======
+	float: left;
+	margin-top: 11px;
+}
+.jd_shop .title_name .name {
+	font-size: 13px;
+	margin-left: 3px;
+>>>>>>> e55daaed19d7f60e591f6e2df66af041c9d07b3b
 }
 .jd_shop .title_name .tip {
 	float: right;
 	color: #d8505c;
 	font-size: 13px;
+<<<<<<< HEAD
 	margin-right: 10px;
 }
+=======
+}
+
+/* 商品及详细信息 */
+.jd_shop .jd_shop_cont {
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+.jd_shop .jd_shop_cont ul li{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+.jd_shop .jd_shop_cont .cont_check {
+	position: absolute;
+	width: 40px;
+	top: 0;
+	left: 0;
+}
+.jd_shop .jd_shop_cont .cont_check .jd_shop_check {
+	position: absolute;
+	top: 20px;
+	left: 10px;
+}
+.jd_shop .jd_shop_cont .cont_product {
+	padding: 10px 10px 0 40px;
+}
+.jd_shop .jd_shop_cont .cont_product .cont_product_img {
+	width: 80px;
+	height: 80px;
+	border:1px solid #e0e0e0;
+	float: left;
+	margin-right: 10px;
+	display: block;
+}
+.jd_shop .jd_shop_cont .cont_product .cont_product_img img {
+	width: 100%;
+}
+.jd_shop .jd_shop_cont .cont_product .cont_product_box {
+	height: 80px;
+	overflow: hidden;
+    font-size: 13px;
+    color: #555;
+}
+.jd_shop .jd_shop_cont .cont_product .product_detail {
+	height: 30px;
+	line-height: 15px;
+	font-size: 13px;
+	color: #555;
+	margin-bottom: 5px;
+}
+.jd_shop .jd_shop_cont .cont_product .cont_product_box .price {
+	margin-bottom: 5px;
+	color: #d8505c;
+}
+.jd_shop .jd_shop_cont .cont_product .option .change_num_left {
+	width: 32px;
+	height: 24px;
+	line-height: 24px;
+	border: 1px solid #e0e0e0;
+	border-radius: 2px 0 0 2px;
+	display: block;
+	float: left;
+	text-align: center;
+}
+.jd_shop .jd_shop_cont .cont_product .option input {
+	width: 32px;
+	height: 24px;
+	line-height: 24px;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+	float: left;
+	text-align: center;
+}
+.jd_shop .jd_shop_cont .cont_product .option .change_num_right {
+	width: 32px;
+	height: 24px;
+	line-height: 24px;
+	border: 1px solid #e0e0e0;
+	border-radius: 0 2px 2px 0;
+	display: block;
+	float: left;
+	text-align: center;
+}
+
+/* 删除按钮 */
+.delete_box{
+    float: right;
+    margin-right: 5px;
+}
+.delete_box .delete_box_top {
+	width: 20px;
+    height: 5px;
+    background: url("../images/delete_up.png");
+    background-size: 20px 5px;
+    display: block;
+    margin-left: -1px;
+}
+.delete_box .delete_box_bot{
+    width: 18px;
+    height: 18px;
+    background: url("../images/delete_down.png");
+    background-size: 18px 18px;
+    display: block;
+    margin-top: -3px;
+}
+
+/* 结算部分 */
+.jd_amount {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 62px;
+	width: 100%;
+	background-color: rgba(0,0,0,0.8);
+}
+.jd_amount .amount_check {
+	position: absolute;
+	width: 80px;
+	line-height: 62px;
+}
+.jd_amount .amount_check .jd_shop_check {
+	position: absolute;
+	top: 20px;
+	left: 10px;
+}
+.jd_amount .amount_check .all {
+	padding-left: 35px;
+	color: #fff;
+}
+.jd_amount .amount_info {
+	padding-left: 75px;
+	padding-right: 80px;
+	height: 62px;
+	color: #fff;
+}
+.jd_amount .amount_info .sum {
+	font-size: 16px;
+	padding-top: 15px;
+}
+.jd_amount .amount_info .other {
+	font-size: 10px;
+	padding-top: 5px;
+}
+.jd_amount .amount_submit {
+	height: 62px;
+	width: 120px;
+	padding: 0 2px;
+	text-align: center;
+	line-height: 62px;
+	color: #fff;
+	background-color: #d8505c;
+	font-size: 18px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.jd_amount .amount_submit span {
+	font-size: 12px;
+}
+
+/* 删除按钮弹出框 */
+.jd_win {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+	z-index: 1001;
+}
+.jd_win .win_dialog {
+	width: 80%;
+	margin: 0 auto;
+	background-color: #fff;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	padding: 0 5%;
+}
+.jd_win .win_dialog .win_text {
+	line-height: 75px;
+	color: #666;
+	text-align: center;
+	border-bottom: 1px solid #e0e0e0;
+	margin-bottom: 10px;
+}
+.jd_win .win_dialog .win_button {
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+.jd_win .win_dialog .win_button .cancel {
+	width: 40%;
+	height: 36px;
+	float: left;
+	background-color: #fff;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+    color: #888;
+    text-align: center;
+    line-height: 36px;
+}
+.jd_win .win_dialog .win_button .submit {
+	width: 40%;
+	height: 36px;
+	float: right;
+	background-color: #d8505c;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    line-height: 36px;
+}
+
+
+
+>>>>>>> e55daaed19d7f60e591f6e2df66af041c9d07b3b
