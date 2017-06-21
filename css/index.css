@@ -1,8 +1,8 @@
 /*
 * @Author: Administrator
 * @Date:   2017-06-09 17:36:20
-* @Last Modified by:   Administrator
-* @Last Modified time: 2017-06-19 17:14:47
+* @Last Modified by:   Ronaldo
+* @Last Modified time: 2017-06-21 22:13:46
 */
 body{
     background: #f5f5f5;
@@ -29,7 +29,7 @@ body{
 	height: 40px;
 	margin: 0 auto;
 	position: relative;
-	background: rgba(201,21,35,0.85);
+	background: rgba(201,21,35,0);
 }
 .jd_header .jd_header_box .icon_logo {
 	background-position: 0 -103px;
@@ -89,6 +89,10 @@ body{
 .jd_banner ul:first-child li{
     width: 10%;
     float: left;
+}
+.jd_banner ul:first-child li a {
+	width: 100%;
+	display: block;
 }
 .jd_banner ul:first-child li img {
 	width: 100%;
