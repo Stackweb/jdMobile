@@ -1,13 +1,4 @@
-/*
-* @Author: Ronaldo
-* @Date:   2017-06-12 21:05:37
-* @Last Modified by:   Administrator
-<<<<<<< HEAD
-* @Last Modified time: 2017-06-15 10:18:34
-=======
-* @Last Modified time: 2017-06-15 17:41:24
->>>>>>> e55daaed19d7f60e591f6e2df66af041c9d07b3b
-*/
+
 /* 满屏效果 */
 body {
 	position: absolute;
@@ -32,7 +23,11 @@ body {
 	z-index: 999;
 	overflow: hidden;
 }
-
+.jd_category .jd_category_left .left_box{
+	width: 90px;
+    -webkit-transition: all .3s ease 0s;
+    transition: all .3s ease 0s;
+}
 .jd_category .jd_category_left ul li{
     height: 50px;
     width: 90px;

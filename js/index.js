@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-06-19 11:15:48
 * @Last Modified by:   Ronaldo
-* @Last Modified time: 2017-06-20 00:23:36
+* @Last Modified time: 2017-06-21 22:06:24
 */
 
 'use strict';
@@ -76,7 +76,7 @@ var scrollPic = function(){
 	var pointBox = banner.getElementsByTagName('ul')[1];
 	var pointList = pointBox.getElementsByTagName('li');
 
-    var width = banner.offsetWidth;
+    var w = banner.offsetWidth;
 	var index = 1;  /* 初始化index为1，即显示第一张图片 */
 	var timer = timer;
 
@@ -102,8 +102,8 @@ var scrollPic = function(){
 	timer = setInterval(function(){
         index ++;
         addTransition();
-        setTransform(-index*width);
-	},1000)
+        setTransform(-index*w);
+	},3000)
 
 	//判断轮播图是否走完
 	imgBox.addEventListener("transitionEnd",function(){
@@ -115,7 +115,7 @@ var scrollPic = function(){
 
 		//清除过渡并跳到第一或最后一张
 		removeTransition();
-		setTransform(-index*width);
+		setTransform(-index*w);
 		setPoint();
 	},false)
 
@@ -126,7 +126,7 @@ var scrollPic = function(){
 			index = 8;
 		}
 		removeTransition();
-		setTransform(-index*width);
+		setTransform(-index*w);
 		setPoint();
 	},false)
 
@@ -137,6 +137,72 @@ var scrollPic = function(){
 	    }
 	    pointList[index-1].className = "active";
     }
+/* 3.图片滑动 (touch事件）*/
+	/* 
+	    思路：① 首先得到手指点击的X坐标值
+	          ② 通过touchmove事件，不断获取手指每次滑动到的位置的X坐标值
+	          ③ 用手指每次滑动到的位置的X减去手指点击屏幕时的X，就是手指滑动的距离
+	          ④ 根据滑动距离的正负即可判断应该显示上一张还是下一张
+	          ⑤ 通过每次手指滑动距离来设置imgBox的translateX，实现图片跟随手指移动
+	          ⑥ 当不超过一定的滑动距离的时候，吸附回去  定位回去     （一定的距离  1/3  屏幕宽度  过渡）
+              ⑦ 当超过了一定的距离的时候，滚动到上一张或下一张  （一定的距离  1/3  屏幕宽度  过渡）
+              ⑧ 注意：当手指接触屏幕时，要清除定时器；手指离开屏幕后，开启定时器
+    */
+
+    // 初始化定义变量
+    var startX = 0;
+    var moveX = 0;
+    var distanceX = 0;
+    var isMove = false;  //用于判断手指是否发生了移动
+
+    imgBox.addEventListener('touchstart',function(e){
+    	/* 先清除定时器 */
+    	clearInterval(timer);
+    	startX = e.touches[0].clientX;
+    });
+    imgBox.addEventListener('touchmove',function(e){
+    	isMove = true;
+    	moveX = e.touches[0].clientX;
+    	distanceX = moveX - startX;  /* 可正可负 */
+
+    	/* 实现图片跟随手指移动：imgBox的translateX应该为原先的-index*w加上手指滑动过的距离 */
+    	var currentX = -index*w+distanceX;
+    	/* 移除过渡动画 */
+    	removeTransition();
+		setTransform(currentX);
+    });
+    imgBox.addEventListener('touchend',function(){
+    	/* 判断手指滑动的距离是否超过了盒子的1/3 */
+    	if(isMove && (Math.abs(distanceX) > w/3)){
+    		/* 当超过了1/3时，通过判断distanceX的正负即可得知应该播放上一张还是下一张 */
+    		if(distanceX > 0){
+    			index --;
+    		}else{
+    			index ++;
+    		}
+
+    		/* 做动画 */
+    		addTransition();
+            setTransform(-index*w);
+    	}else{
+    		addTransition();
+            setTransform(-index*w);
+    	}
+
+    	/* 重置变量值 */
+        startX = 0;
+        moveX = 0;
+        distanceX = 0;
+        isMove = false;
+    
+        /* 重新开启定时器 */
+        clearInterval(timer);   /* 先清除再开启 */
+        timer = setInterval(function(){
+        	index ++;
+        	addTransition();
+            setTransform(-index*w);
+        },3000)
+    });
 }
 
 
