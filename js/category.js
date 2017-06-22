@@ -1,8 +1,8 @@
 /*
 * @Author: Ronaldo
 * @Date:   2017-06-21 22:30:25
-* @Last Modified by:   Ronaldo
-* @Last Modified time: 2017-06-22 01:22:16
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-06-22 10:39:44
 */
 
 'use strict';
@@ -83,8 +83,9 @@ var scrollCategory = function(){
 		    currentY = currentY - moveY;
 		}
 
-		/* 当时间间隔小于150ms且未发生移动时，触发tap轻触事件 */
-	    if((endTime - startTime) < 150 && moveY == 0){
+		/* 当时间间隔小于150ms，触发tap轻触事件 */
+	    if((endTime - startTime) < 150){
+
             for(var i = 0;i < liList.length;i++){
             	liList[i].className = " ";
             	liList[i].index = i;
