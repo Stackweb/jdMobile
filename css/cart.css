@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-06-15 10:21:09
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-06-19 10:30:13
+* @Last Modified time: 2017-06-22 16:44:17
 */
 body {
 	background-color: #f5f5f5;
@@ -41,6 +41,9 @@ body {
 	margin-top: 10px;
 	background-color: #fff;
 	position: relative;
+}
+.shop_mb{
+	margin-bottom:62px
 }
 .jd_shop_check {
 	width: 20px;
@@ -191,7 +194,7 @@ body {
 
 /* 结算部分 */
 .jd_amount {
-	position: absolute;
+	position: fixed;
 	left: 0;
 	bottom: 0;
 	height: 62px;
@@ -252,6 +255,7 @@ body {
 	height: 100%;
 	background-color: rgba(0,0,0,0.4);
 	z-index: 1001;
+	display: none;
 }
 .jd_win .win_dialog {
 	width: 80%;
@@ -260,6 +264,7 @@ body {
 	border: 1px solid #e0e0e0;
 	border-radius: 4px;
 	padding: 0 5%;
+	margin-top: 40%;
 }
 .jd_win .win_dialog .win_text {
 	line-height: 75px;
@@ -293,6 +298,38 @@ body {
     color: #fff;
     text-align: center;
     line-height: 36px;
+}
+
+
+/* 删除框弹出动画*/
+@-webkit-keyframes jumpOut {
+    0%{
+    	opacity: 0;
+    	transform: translateY(-2000px);
+    	-webkit-transform: translateY(-2000px);
+    }
+    60%{
+    	opacity: 1;
+    	transform: translateY(30px);
+    	-webkit-transform: translateY(30px);
+    }
+    75%{
+    	transform: translateY(-10px);
+    	-webkit-transform: translateY(-10px);
+    }
+    90%{
+    	transform: translateY(5px);
+    	-webkit-transform: translateY(5px);
+    }
+    100%{
+    	opacity: 1;
+    	transform: none;
+    	-webkit-transform: none;
+    }
+}
+.jumpOut {
+	animation: jumpOut 1s ease;
+	-webkit-animation: jumpOut 1s ease;
 }
 
 
