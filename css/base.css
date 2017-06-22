@@ -2,11 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-06-09 16:58:00
 * @Last Modified by:   Administrator
-<<<<<<< HEAD
-* @Last Modified time: 2017-06-15 11:10:53
-=======
 * @Last Modified time: 2017-06-15 17:43:11
->>>>>>> e55daaed19d7f60e591f6e2df66af041c9d07b3b
 */
 *,
 ::before,
@@ -79,20 +75,11 @@ textarea {
 	left: 0;
 }
 .jd_topBar h2 {
-<<<<<<< HEAD
-	text-align: center;
-	font-size: 16px;
-	font-family: sans-serif;
-	font-weight: inherit;
-	line-height: 44px;
-	color: #666;
-=======
 	font-size: 16px;
 	color: #666;
 	font-weight: inherit;
 	text-align: center;
 	line-height: 44px;
->>>>>>> e55daaed19d7f60e591f6e2df66af041c9d07b3b
 }
 .jd_topBar form {
 	width: 100%;
@@ -117,8 +104,4 @@ textarea {
 	position: absolute;
 	top: 0;
 	right: 0;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e55daaed19d7f60e591f6e2df66af041c9d07b3b
